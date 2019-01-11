@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'zhongjiudb',
         'USER':'root',
         'PASSWORD':'123456',
-        'HOST':'127.0.0.1',
+        'HOST':'47.107.77.202',
         'PORT':'3306',
     }
 }
