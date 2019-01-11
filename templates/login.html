@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录-中酒网</title>
+		<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}" ></script>
+		<script type="text/javascript" src="{% static 'js/login.js' %}" ></script>
+	</head>
+	<body>
+		<div class="header">
+			<!--头部的上部-->
+			<div class="header_top">
+				<ul class="header_top_left">
+					<li><a><img src="{% static 'img/zj-logo.png' %}"/></a></li>
+					<li>登录</li>
+				</ul>
+				<ul class="header_top_right">
+					<li>100%正品</li>
+					<li class="header_top_left1">一时达</li>
+					<li>金牌客服</li>
+				</ul>
+			</div>
+			<!--头部的尾部-->
+			<div class="header_bottom">
+				<div class="header_bottom_left"><a href=""></a></div>
+				<div class="header_bottom_right">
+					<h1></h1>
+					<input type="text" placeholder="邮箱/手机号/用户名" class="inp1" />
+					<input type="password" placeholder="请输入密码" class="inp2" />
+					<label>
+					<input type="checkbox" class="inp3"/>记住用户名
+					<a href="#">忘记密码?</a>
+					</label>
+					<button class="bnt1">登录</button>
+					<a href="{% url 'zj:register' %}" class="a">30秒注册&gt;&gt;</a>
+					<p class="other">使用合作网站账号登录：</p>
+					<p class="other1">
+						<a href="#" class="r_o_1"></a>
+						<a href="#" class="r_o_2"></a>
+						<a href="#" class="r_o_3"></a>
+					</p>
+				</div>
+			</div>
+		</div>	
+		<!--尾部-->
+		<div class="footer">
+			<p>Copyright © 2016 中酒网(www.zhongjiu.cn) 版权所有 <a href="#">京ICP备12022216号-2</a></p>
+			<p>购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</p>
+		</div>
+	</body>
+</html>
