@@ -10,12 +10,14 @@ class Banner(models.Model):
         db_table = 'zhongjiu_wheel'
 
 
-# 用户
+# 用户模型类
 class User(models.Model):
-    username = models.CharField(max_length=20)
     password = models.CharField(max_length=255)
     phone = models.CharField(max_length=11)
-    tokon = models.CharField(max_length=255)
+    token = models.CharField(max_length=255)
+
+
+
 
 
 # 商品
