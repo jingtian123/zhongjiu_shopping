@@ -32,8 +32,8 @@
                     <li><a href="#">中国酒业</a></li>
                     <li>Hi,欢迎来到中酒</li>
                     {% if phone %}
-                        <li><a href="#">{{ phone }}</a></li>
-                        <li><a href="{% url 'zj:logout' %}">退出</a></li>
+                        <li><a href="#">{{ phone }}</a>|<a href="{% url 'zj:logout' %}">退出</a></li>
+
                     {% else %}
                         <li class="h_c_t_leftUl1"><a href="{% url 'zj:login' %}">请登录</a></li>
                         <li class="h_c_t_leftUl2"><a href="{% url 'zj:register' %}" style="color: darkred;">注册</a></li>

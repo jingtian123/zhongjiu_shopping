@@ -34,7 +34,7 @@
 {#                        <li class="h_c_t_leftUl2"><a href="{% url 'zj:register' %}" style="color: darkred;">注册</a></li>#}
 {#                    {% endif %}#}
                             {% if phone %}
-                                <li class="h_c_t_leftUl1"><a href="#">{{ phone }}</a> <a href="{% url 'zj:logout' %}">退出</a></li>
+                                <li class="h_c_t_leftUl1"><a href="#">{{ phone }}</a>|<a href="{% url 'zj:logout' %}">退出</a></li>
                             {% else %}
                                 <li class="h_c_t_leftUl1"><a href="{% url 'zj:login' %}">请登录</a></li>
 							    <li class="h_c_t_leftUl2"><a href="{% url 'zj:logout' %}" style="color: darkred;">注册</a></li>

@@ -23,7 +23,7 @@
 				</ul>
 				<ul>
                     {% if phone %}
-                        <li><a href="#">{{ phone }}</a> <a href="{% url 'zj:logout' %}">退出</a></li>
+                        <li><a href="#">用户:{{ phone }}</a>|<a href="{% url 'zj:logout' %}">退出</a></li>
                     {% else %}#}
                         <li><a href="{% url 'zj:login' %}">[登录]</a> <a href="{% url 'zj:register' %}">[免费注册]</a></li>
                     {% endif %}

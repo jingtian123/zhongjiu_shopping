@@ -108,7 +108,7 @@ def login(request):
              user.token = generate_token()
              user.save()
              request.session['token'] = user.token
-             request.session.set_expiry(30)
+             request.session.set_expiry(60*60*24*7)
 
              return response
          else:

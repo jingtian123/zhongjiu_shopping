@@ -31,17 +31,22 @@
         <div class="header_bottom_right">
             <h1></h1>
             <p>我已经注册，马上 <a href="{% url 'zj:login' %}">登录&gt;&gt;</a></p>
-            <form action="{% url 'zj:register' %}" method="post" id="ckphone">
+            <form action="{% url 'zj:register' %}" method="post" id="submit_sent">
                 {% csrf_token %}
-                <input type="text" placeholder="请输入手机号" class="inp1" name="phone"/>
+                <p><input type="text" placeholder="请输入手机号" class="inp1" name="phone"/><i class="lol"></i></p>
+                <p class='reminder'></p>
                 <input type="text" placeholder="请输入验证码" class="inp2"/>
                 <button class="identifyingCode">&nb</button>
                 <span>看不清？换一张</span>
                 {#                            <input type="text" placeholder="请输入验证码" class="inp3"/>#}
                 {#                            <button class="bnt1">免费获取校验码</button>#}
                 <input type="password" placeholder="请输入密码" class="inp4" name="password"/>
+                <br>
+                <br>
                 <input type="password" placeholder="请输入确认密码" class="inp5"/>
-                <input type="submit" value="同意条款注册" class="bnt2">
+                <br>
+                <br>
+                <input type="button" value="同意条款注册" class="bnt2">
             </form>
         </div>
     </div>
