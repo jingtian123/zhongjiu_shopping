@@ -26,3 +26,17 @@
 // 	})
 //
 // })
+$(function () {
+    $('#coco').blur(function () {
+        var reg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
+        console.log($(this).val())
+        if (reg.test($(this).val())) {//格式ok
+            $('.logincheack').eq(0).html('手机号码ok！').css('color','green');
+
+        } else if ($(this).val() == '') {  //手机号为空
+            $('.logincheack').eq(0).html('手机号不能为空！').css('color','orange');
+        } else {
+            $('.logincheack').eq(0).html('手机号格式不正确！').css('color','red');
+        }
+    })
+})

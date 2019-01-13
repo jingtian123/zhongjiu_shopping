@@ -24,7 +24,7 @@ $(function () {
         againPaw();
     })
 
-    // new_add 手机验证
+    // new_add 手机验证 ajax
     $('.inp1').blur(function () {
         var reg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
         if (reg.test($(this).val())) {   //符合
@@ -42,12 +42,12 @@ $(function () {
             })
             $('.reminder').eq(0).html('');
         } else if ($(this).val() == '') {   //不符合
-            $('.reminder').eq(0).html('手机号不能为空！');
+            $('.reminder').eq(0).html('手机号不能为空！').css('color','orange');
         } else {
-            $('.reminder').eq(0).html('手机号码格式不对');
+            $('.reminder').eq(0).html('手机号码格式不对').css('color','red');
         }
     })
-
+////////////////////////////////////////
     //生成验证码
     function generate() {
         var strings = "";

@@ -22,6 +22,8 @@ def index(request):
     yangs = Goods.objects.filter(type='yang')
     # 其他
     others = Goods.objects.filter(type='other')
+    # 限时抢购
+    times = Goods.objects.filter(type='time')
 
     # token
     token = request.session.get('token')
@@ -39,6 +41,7 @@ def index(request):
         'redwines': redwines,
         'yangs': yangs,
         'others': others,
+        'times': times,
 
     }
 
@@ -125,7 +128,10 @@ def logout(request):
     return response
 
 # 商品详情
-def detail(request):
+def detail(request,googsid):
+    goods = Goods.objects.get(pk=googsid)
+    print('地址'+ goods.bigimg,goods.smallimg1,goods.smallimg2,goods.smallimg3,goods.smallimg4)
+
 
 
     # token
@@ -139,6 +145,7 @@ def detail(request):
 
     data={
         'phone': phone,
+        'goods':goods,
     }
     return render(request, 'detail.html',context=data)
 
@@ -174,4 +181,4 @@ def cheakphone(request):
     if users.exists():
         return JsonResponse({'msg':'胸弟,手机被占用了!','status':0})
     else:
-        return JsonResponse({'msg':'恭喜,可用的手机号!','status':1})
+        return JsonResponse({'msg':'可用的手机号!','status':1})

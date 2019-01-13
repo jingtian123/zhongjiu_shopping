@@ -17,14 +17,17 @@ class User(models.Model):
     token = models.CharField(max_length=255)
 
 
-
-
-
 # 商品
 class Goods(models.Model):
     type = models.CharField(max_length=10,default=0)
     img = models.CharField(max_length=100)
     price = models.CharField(max_length=20)
     title = models.CharField(max_length=100)
+    bigimg = models.CharField(max_length=100,default='')
+    smallimg1 = models.CharField(max_length=100,default='')
+    smallimg2 = models.CharField(max_length=100,default='')
+    smallimg3 = models.CharField(max_length=100,default='')
+    smallimg4 = models.CharField(max_length=100,default='')
+
 
 

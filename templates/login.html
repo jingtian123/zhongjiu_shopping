@@ -30,14 +30,16 @@
 {#            <h1></h1>#}
             <form action="{% url 'zj:login' %}" method="post">
                 {% csrf_token %}
-                <input type="text" placeholder="邮箱/手机号/用户名" class="inp1" name="phone"/>
-                <input type="password" placeholder="请输入密码" class="inp2" name="password"/>
+                <input type="text" placeholder="邮箱/手机号/用户名" class="inp1" id="coco" name="phone"/>
+                <p class="logincheack"></p>
+                <br>
+                <input type="password" placeholder="请输入密码" class="inp2"  name="password"/>
                 <label>
                     {#                    <input type="checkbox" class="inp3"/>记住用户名#}
                     <a href="#">忘记密码?</a>
                 </label>
                 {% if err %}
-                    <p style="color: red">{{ err }}</p>
+                    <p class="err" style="color: red">{{ err }}</p>
                 {% endif %}
                 <button class="bnt1">登录</button>
 {#                <input type="submit" value="登录">#}

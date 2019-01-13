@@ -566,42 +566,54 @@
             </ul>
         </h1>
         <div class="flash_sale_commodity" style="display: block;">
-            <ul>
-                <a href="#">
-                    <li><img src="{% static 'img/flash_sale1.jpg' %}"></li>
-                    <li><p>52°出口型白西凤绵柔凤香型 500ml*6</p></li>
-                    <li><span>￥399.00</span>
-                        <button>立即抢购</button>
-                    </li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#">
-                    <li><img src="{% static 'img/flash_sale2.jpg' %}"></li>
-                    <li><p>52°泸州窖酒（窖藏龙窖）500ml*6 </p></li>
-                    <li><span>￥219.00</span>
-                        <button>立即抢购</button>
-                    </li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#">
-                    <li><img src="{% static 'img/flash_sale3.jpg' %}"></li>
-                    <li><p>拉菲珍藏波尔多 750ml</p></li>
-                    <li><span>￥179.00</span>
-                        <button>立即抢购</button>
-                    </li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#">
-                    <li><img src="{% static 'img/flash_sale4.jpg' %}"></li>
-                    <li><p>43°茅台迎宾酒500ml*6</p></li>
-                    <li><span>￥299.00</span>
-                        <button>立即抢购</button>
-                    </li>
-                </a>
-            </ul>
+{#            <ul>#}
+{#                <a href="#">#}
+{#                    <li><img src="{% static 'img/flash_sale1.jpg' %}"></li>#}
+{#                    <li><p>52°出口型白西凤绵柔凤香型 500ml*6</p></li>#}
+{#                    <li><span>￥399.00</span>#}
+{#                        <button>立即抢购</button>#}
+{#                    </li>#}
+{#                </a>#}
+{#            </ul>#}
+{#            <ul>#}
+{#                <a href="#">#}
+{#                    <li><img src="{% static 'img/flash_sale2.jpg' %}"></li>#}
+{#                    <li><p>52°泸州窖酒（窖藏龙窖）500ml*6 </p></li>#}
+{#                    <li><span>￥219.00</span>#}
+{#                        <button>立即抢购</button>#}
+{#                    </li>#}
+{#                </a>#}
+{#            </ul>#}
+{#            <ul>#}
+{#                <a href="#">#}
+{#                    <li><img src="{% static 'img/flash_sale3.jpg' %}"></li>#}
+{#                    <li><p>拉菲珍藏波尔多 750ml</p></li>#}
+{#                    <li><span>￥179.00</span>#}
+{#                        <button>立即抢购</button>#}
+{#                    </li>#}
+{#                </a>#}
+{#            </ul>#}
+{#            <ul>#}
+{#                <a href="#">#}
+{#                    <li><img src="{% static 'img/flash_sale4.jpg' %}"></li>#}
+{#                    <li><p>43°茅台迎宾酒500ml*6</p></li>#}
+{#                    <li><span>￥299.00</span>#}
+{#                        <button>立即抢购</button>#}
+{#                    </li>#}
+{#                </a>#}
+{#            </ul>#}
+            {% for time in times %}
+                <ul>
+                    <a href="{% url 'zj:detail' time.id %}">
+                        <li><img src="{{ time.img }}" alt=""></li>
+                        <li><p>{{ time.title }}</p></li>
+                        <li><span>￥{{ time.price }}</span>
+                            <button>立即抢购</button>
+                        </li>
+                    </a>
+                </ul>
+            {% endfor %}
+
             <ul>
                 <a href="#">
                     <li><img src="{% static 'img/flash_sale5.jpg' %}"></li>

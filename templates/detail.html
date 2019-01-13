@@ -458,7 +458,7 @@
 				<div class="content_info_left">
 					<div class="c_i_l_top">
 						<!--小图片，小区域-->
-						<img src="{% static 'img/ProductList1.jpg' %}" class="smallImg" />
+						<img src="{{ goods.bigimg }}" class="smallImg" />
 						<div class="smallArea"></div>
 					</div>
 					<div class="c_i_l_content">
@@ -466,10 +466,11 @@
 						<a class="right">&gt;</a>
 						<div class="content">
 							<ul>
-								<li><img src="{% static 'img/ProductList1.jpg' %}" /></li>
-								<li><img src="{% static 'img/ProductList2.jpg' %}" /></li>
-								<li><img src="{% static 'img/ProductList3.jpg' %}" /></li>
-								<li><img src="{% static 'img/ProductList4.jpg' %}" /></li>
+{#                                static/img/ProductList1.jpg#}
+								<li><img src="{{ goods.bigimg }}" /></li>
+								<li><img src="{{ goods.smallimg2 }}" /></li>
+								<li><img src="{{ goods.smallimg3 }}" /></li>
+								<li><img src="{{ goods.smallimg4 }}" /></li>
 								<li><img src="{% static 'img/ProductList5.jpg' %}" /></li>
 							</ul>
 						</div>
