@@ -146,73 +146,73 @@ $(function(){
 		// 	}
 		// })
 	// }
-	//固定位置内容
-	// $('.fixeds_1').mouseenter(function(){
-	// 	$(this).css('background','darkred');
-	// 	$(this).parent().css('overflow','visible');
-	// })
-	// $('.fixeds_1').mouseleave(function(){
-	// 	$(this).css('background','#313131');
-	// 	$(this).parent().css('overflow','hidden');
-	// })
-	// $('.fixeds_1Top').click(function(){
-	// 	var top = $(window).scrollTop();
-	// 	var timer = setInterval(function(){
-	// 		top -= 100;
-	// 		console.log(top)
-	// 		if(top <= 0)
-	// 		{
-	// 			top = 0;
-	// 			$(window).scrollTop(top);
-	// 			clearInterval(timer);
-	// 		}
-	// 		$(window).scrollTop(top);
-	// 	},50);
-	// })
-	// $('.fixeds_1Cart').click(function(){
-	// 	window.location.href = "shoppingCart.html";
-	// })
-	//商品加入购物车
-	// $('.c_i_c_b_right_a1').click(function(){
-	// 	var arr = $.cookie("objs") ? JSON.parse($.cookie("objs")) : [];
-	// 	var obj1 = {};
-	// 	obj1.name = $('.content_info_content h1').html();
-	// 	obj1.price = $('.content_info_content_dl1 .dd1').html();
-	// 	obj1.img = $('.content ul li img').eq(0).attr('src');
-	// 	obj1.num = $('.c_i_c_b_left input').val();
-	// 	for(var i = 0;i < arr.length; i++){
-	// 		if(obj1.name == arr[i].name){
-	// 			$.cookie("objs", JSON.stringify(arr), {expires:-1, path:"/"});
-	// 			arr[i].num = arr[i].num * 1 + obj1.num * 1;
-	// 			$.cookie("objs", JSON.stringify(arr), {expires:7, path:"/"});
-	// 			break;
-	// 		}else if(i == arr.length - 1){
-	// 			arr.push(obj1);
-	// 			$.cookie("objs", JSON.stringify(arr), {expires:7, path:"/"});
-	// 			break;
-	// 		}
-	// 	}
-	// 	if(arr.length == 0){
-	// 		arr.push(obj1);
-	// 		$.cookie("objs", JSON.stringify(arr), {expires:7, path:"/"});
-	// 	}
-	// 	alert("添加成功");
-	// 	show();
-	// })
-	// function show(){
-	// 	var arr = $.cookie("objs") ? JSON.parse($.cookie("objs")) : [];
-	// 	var numbers = 0;
-	// 	if(arr.length > 0){
-	// 		$('.fixeds_2').show();
-	// 		for(var i = 0; i < arr.length; i++){
-	// 			numbers = numbers + arr[i].num * 1;
-	// 		}
-	// 		$('.fixeds_2').html(numbers);
-	// 		$('.num').html(numbers)
-	// 	}else{
-	// 		$('.fixeds_2').hide();
-	// 	}
-	// }
-	// show();
+	// 固定位置内容
+	$('.fixeds_1').mouseenter(function(){
+		$(this).css('background','darkred');
+		$(this).parent().css('overflow','visible');
+	})
+	$('.fixeds_1').mouseleave(function(){
+		$(this).css('background','#313131');
+		$(this).parent().css('overflow','hidden');
+	})
+	$('.fixeds_1Top').click(function(){
+		var top = $(window).scrollTop();
+		var timer = setInterval(function(){
+			top -= 100;
+			console.log(top)
+			if(top <= 0)
+			{
+				top = 0;
+				$(window).scrollTop(top);
+				clearInterval(timer);
+			}
+			$(window).scrollTop(top);
+		},50);
+	})
+	$('.fixeds_1Cart').click(function(){
+		window.location.href = "shoppingCart.html";
+	})
+	// 商品加入购物车
+	$('.c_i_c_b_right_a1').click(function(){
+		var arr = $.cookie("objs") ? JSON.parse($.cookie("objs")) : [];
+		var obj1 = {};
+		obj1.name = $('.content_info_content h1').html();
+		obj1.price = $('.content_info_content_dl1 .dd1').html();
+		obj1.img = $('.content ul li img').eq(0).attr('src');
+		obj1.num = $('.c_i_c_b_left input').val();
+		for(var i = 0;i < arr.length; i++){
+			if(obj1.name == arr[i].name){
+				$.cookie("objs", JSON.stringify(arr), {expires:-1, path:"/"});
+				arr[i].num = arr[i].num * 1 + obj1.num * 1;
+				$.cookie("objs", JSON.stringify(arr), {expires:7, path:"/"});
+				break;
+			}else if(i == arr.length - 1){
+				arr.push(obj1);
+				$.cookie("objs", JSON.stringify(arr), {expires:7, path:"/"});
+				break;
+			}
+		}
+		if(arr.length == 0){
+			arr.push(obj1);
+			$.cookie("objs", JSON.stringify(arr), {expires:7, path:"/"});
+		}
+		alert("添加成功");
+		show();
+	})
+	function show(){
+		var arr = $.cookie("objs") ? JSON.parse($.cookie("objs")) : [];
+		var numbers = 0;
+		if(arr.length > 0){
+			$('.fixeds_2').show();
+			for(var i = 0; i < arr.length; i++){
+				numbers = numbers + arr[i].num * 1;
+			}
+			$('.fixeds_2').html(numbers);
+			$('.num').html(numbers)
+		}else{
+			$('.fixeds_2').hide();
+		}
+	}
+	show();
 })
 

@@ -33,10 +33,10 @@
             <p>我已经注册，马上 <a href="{% url 'zj:login' %}">登录&gt;&gt;</a></p>
             <form action="{% url 'zj:register' %}" method="post" id="submit_sent">
                 {% csrf_token %}
-                <p><input type="text" placeholder="请输入手机号" class="inp1" name="phone"/><i class="lol"></i></p>
+                <p><input type="text" placeholder="请输入手机号" class="inp1" name="phone"/></p>
                 <p class='reminder'></p>
                 <input type="text" placeholder="请输入验证码" class="inp2"/>
-                <button class="identifyingCode">&nb</button>
+                <div class="identifyingCode">&nb</div>
                 <span>看不清？换一张</span>
                 {#                            <input type="text" placeholder="请输入验证码" class="inp3"/>#}
                 {#                            <button class="bnt1">免费获取校验码</button>#}

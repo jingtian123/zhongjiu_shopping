@@ -35,16 +35,16 @@ $(function () {
                 console.log(response)
                 $('.lol').html(response.msg)
                 if (response.status) {
-
+                       $('.reminder').eq(0).html('小伙子运气可以啊，手机号可用').css('color', 'green');
                 } else {
-
+                       $('.reminder').eq(0).html('手机号占用').css('color', 'orange');
                 }
             })
             $('.reminder').eq(0).html('');
         } else if ($(this).val() == '') {   //不符合
-            $('.reminder').eq(0).html('手机号不能为空！').css('color','orange');
+            $('.reminder').eq(0).html('手机号不能为空！').css('color', 'orange');
         } else {
-            $('.reminder').eq(0).html('手机号码格式不对').css('color','red');
+            $('.reminder').eq(0).html('手机号码格式不对').css('color', 'red');
         }
     })
 ////////////////////////////////////////
@@ -130,16 +130,25 @@ $(function () {
     //     }
     // })
     ////////////////////////////////////////
-$('.bnt2').click(function () {
-    var stringNum = $('.identifyingCode').html();
-    var stringsNum = $('.inp2').val();
-    if ($('.inp4').val() == $('.inp5').val()) {
-        if (stringNum.toLowerCase() == stringsNum.toLowerCase()){
-            $('#submit_sent').submit()
-        }
-    }
-})
+    $('.bnt2').click(function () {
 
+        var stringNum = $('.identifyingCode').html();
+        var stringsNum = $('.inp2').val();
+        var reg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
+        temp = $('.inp4').val()
+
+
+        if (reg.test($('.inp1').val())) {
+            console.log('ok')
+            if ((temp != null && temp == $('.inp5').val()) && (stringNum.toLowerCase() == stringsNum.toLowerCase())) {
+
+            console.log(temp)
+            $('#submit_sent').submit()
+
+        }
+        }
+
+    })
 
 
 //////////////////////////////////////////////

@@ -182,3 +182,11 @@ def cheakphone(request):
         return JsonResponse({'msg':'胸弟,手机被占用了!','status':0})
     else:
         return JsonResponse({'msg':'可用的手机号!','status':1})
+
+# 加购物车
+def addcart(request):
+    return None
+
+# 购物车减操作
+def subcart(request):
+    return None

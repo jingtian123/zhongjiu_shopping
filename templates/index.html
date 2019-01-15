@@ -32,14 +32,12 @@
                     <li><a href="#">中国酒业</a></li>
                     <li>Hi,欢迎来到中酒</li>
                     {% if phone %}
-                        <li><a href="#">{{ phone }}</a>|<a href="{% url 'zj:logout' %}">退出</a></li>
-
+                        <li><a href="#" style="color: red">{{ phone }}</a>|<a href="{% url 'zj:logout' %}"
+                                                                              style="color: black">退出</a></li>
                     {% else %}
                         <li class="h_c_t_leftUl1"><a href="{% url 'zj:login' %}">请登录</a></li>
                         <li class="h_c_t_leftUl2"><a href="{% url 'zj:register' %}" style="color: darkred;">注册</a></li>
                     {% endif %}
-                    {#                    <li class="h_c_t_leftUl1"><a href="{% url 'zj:login' %}">请登录</a></li>#}
-                    {#                    <li class="h_c_t_leftUl2"><a href="{% url 'zj:register' %}" style="color: darkred;">注册</a></li>#}
                 </ul>
             </div>
             <div class="h_c_n_right">
@@ -83,7 +81,9 @@
             </div>
             <!--购物车-->
             <div class="h_b_t_right">
-                <p>我的购物车</p>
+                <a href="{% url 'zj:cart' %}">
+                    <p>我的购物车</p>
+                </a>
                 <img src="{% static 'img/icon_index_05.jpg' %}">
                 <div class="num">0</div>
             </div>
@@ -438,19 +438,6 @@
 <div id="content">
     <!--轮播图-->
     <div class="banner">
-        {#        <ul class="banner_img">#}
-        {#            {% for lunbo in lunbos %}#}
-        {#                <li><img src="{{ lunbo.img }}" alt=""></li>#}
-        {#            {% endfor %}#}
-        {#        </ul>#}
-        {#        <div class="banner_num">#}
-        {#            <span style="background: red;">1</span>#}
-        {#            <span>2</span>#}
-        {#            <span>3</span>#}
-        {#            <span>4</span>#}
-        {#            <span>5</span>#}
-        {#            <span>6</span>#}
-        {#        </div>#}
         <div class="swiper-container" id="topSwiper">
             <div class="swiper-wrapper">
                 {% for lunbo in lunbos %}
@@ -475,21 +462,6 @@
                 autoplayDisableOnInteraction: false
             });
         </script>
-        <!--轮播图上的右边部分-->
-        {#                <div class="banner_home">#}
-        {#                    <div class="banner_right">#}
-        {#                        <h3><i></i><span>公告</span><a href="#">更多&nbsp;&gt;</a></h3>#}
-        {#                        <div class="b_r_nav">#}
-        {#                            <ul>#}
-        {#                                <li><a href="#" style="color: darkred;"><strong>[公告]</strong> 中秋好礼 买一赠一</a></li>#}
-        {#                                <li><a href="#"><strong>[公告]</strong> 五粮液永不分离 149元购</a></li>#}
-        {#                                <li><a href="#"><strong>[公告]</strong> 生态青稞2600 买赠人参酒</a></li>#}
-        {#                                <li><a href="#"><strong>[公告]</strong> 酒类协会秘书长到访中酒</a></li>#}
-        {#                            </ul>#}
-        {#                        </div>#}
-        {#                        <div class="b_r_img"></div>#}
-        {#                    </div>#}
-        {#                </div>#}
     </div>
     <!--品牌特卖-->
     <div class="sample_sale">
@@ -566,42 +538,6 @@
             </ul>
         </h1>
         <div class="flash_sale_commodity" style="display: block;">
-{#            <ul>#}
-{#                <a href="#">#}
-{#                    <li><img src="{% static 'img/flash_sale1.jpg' %}"></li>#}
-{#                    <li><p>52°出口型白西凤绵柔凤香型 500ml*6</p></li>#}
-{#                    <li><span>￥399.00</span>#}
-{#                        <button>立即抢购</button>#}
-{#                    </li>#}
-{#                </a>#}
-{#            </ul>#}
-{#            <ul>#}
-{#                <a href="#">#}
-{#                    <li><img src="{% static 'img/flash_sale2.jpg' %}"></li>#}
-{#                    <li><p>52°泸州窖酒（窖藏龙窖）500ml*6 </p></li>#}
-{#                    <li><span>￥219.00</span>#}
-{#                        <button>立即抢购</button>#}
-{#                    </li>#}
-{#                </a>#}
-{#            </ul>#}
-{#            <ul>#}
-{#                <a href="#">#}
-{#                    <li><img src="{% static 'img/flash_sale3.jpg' %}"></li>#}
-{#                    <li><p>拉菲珍藏波尔多 750ml</p></li>#}
-{#                    <li><span>￥179.00</span>#}
-{#                        <button>立即抢购</button>#}
-{#                    </li>#}
-{#                </a>#}
-{#            </ul>#}
-{#            <ul>#}
-{#                <a href="#">#}
-{#                    <li><img src="{% static 'img/flash_sale4.jpg' %}"></li>#}
-{#                    <li><p>43°茅台迎宾酒500ml*6</p></li>#}
-{#                    <li><span>￥299.00</span>#}
-{#                        <button>立即抢购</button>#}
-{#                    </li>#}
-{#                </a>#}
-{#            </ul>#}
             {% for time in times %}
                 <ul>
                     <a href="{% url 'zj:detail' time.id %}">
@@ -695,15 +631,15 @@
         <h1>
             <i></i>
             <span>白酒</span>
-            {#            <ul>#}
-            {#                <li style="color: darkred; font-weight: bold;">爆品推荐</li>#}
-            {#                <li>茅台</li>#}
-            {#                <li>五粮液</li>#}
-            {#                <li>酱香</li>#}
-            {#                <li>浓香</li>#}
-            {#                <li>清香</li>#}
-            {#                <li><a href="#">更多</a></li>#}
-            {#            </ul>#}
+            <ul>
+                <li style="color: darkred; font-weight: bold;">爆品推荐</li>
+                <li>茅台</li>
+                <li>五粮液</li>
+                <li>酱香</li>
+                <li>浓香</li>
+                <li>清香</li>
+                <li><a href="#">更多</a></li>
+            </ul>
             <p></p>
         </h1>
         <div class="floor_liquor_content">
@@ -723,49 +659,14 @@
             <div class="f_l_c_content">
                 <div>
 
-                        {% for bai in bais %}
-                            <ul>
-                                <li><img src="{{ bai.img }}" alt=""></li>
-                                <li><p>{{ bai.title }}</p></li>
-                                <li><span>{{ bai.price }}</span></li>
-                            </ul>
-                        {% endfor %}
+                    {% for bai in bais %}
+                        <ul>
+                            <li><img src="{{ bai.img }}" alt=""></li>
+                            <li><p>{{ bai.title }}</p></li>
+                            <li><span>{{ bai.price }}</span></li>
+                        </ul>
+                    {% endfor %}
 
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/floor_liquor1.jpg' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/floor_liquor1.jpg' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/floor_liquor1.jpg' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/floor_liquor1.jpg' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/floor_liquor1.jpg' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/floor_liquor1.jpg' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/floor_liquor1.jpg' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
                 </div>
             </div>
             <div class="f_l_c_right">
@@ -829,15 +730,15 @@
         <h1>
             <i></i>
             <span>红酒</span>
-{#            <ul>#}
-{#                <li style="color: darkred; font-weight: bold;">热卖</li>#}
-{#                <li>红葡萄酒</li>#}
-{#                <li>白葡萄酒</li>#}
-{#                <li>起泡酒</li>#}
-{#                <li>特拉托</li>#}
-{#                <li>中级庄</li>#}
-{#                <li><a href="#">更多</a></li>#}
-{#            </ul>#}
+            <ul>
+                <li style="color: darkred; font-weight: bold;">热卖</li>
+                <li>红葡萄酒</li>
+                <li>白葡萄酒</li>
+                <li>起泡酒</li>
+                <li>特拉托</li>
+                <li>中级庄</li>
+                <li><a href="#">更多</a></li>
+            </ul>
             <p></p>
         </h1>
         <div class="red_wine_content">
@@ -857,48 +758,11 @@
                 <div>
                     {% for redwine in redwines %}
                         <ul>
-                        <li><img src="{{ redwine.img }}" alt=""></li>
-                        <li><p>{{ redwine.title }}</p></li>
-                        <li><span>{{ redwine.price }}</span></li>
-                    </ul>
+                            <li><img src="{{ redwine.img }}" alt=""></li>
+                            <li><p>{{ redwine.title }}</p></li>
+                            <li><span>{{ redwine.price }}</span></li>
+                        </ul>
                     {% endfor %}
-
-
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine10.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine11.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine12.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine13.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine14.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine15.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine16.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
                 </div>
             </div>
             <div class="r_w_c_right">
@@ -959,41 +823,6 @@
                     {% endfor %}
 
 
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine10.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine11.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine12.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine13.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine14.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine15.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine16.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
                 </div>
             </div>
             <div class="f_w_c_right">
@@ -1055,41 +884,6 @@
                     {% endfor %}
 
 
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine10.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine11.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine12.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine13.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine14.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine15.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
-{#                    <ul>#}
-{#                        <li><img src="{% static 'img/red_wine16.jpg/' %}" alt=""></li>#}
-{#                        <li><p>茅台</p></li>#}
-{#                        <li><span>$255</span></li>#}
-{#                    </ul>#}
                 </div>
             </div>
             <div class="o_c_right">
@@ -1244,9 +1038,5 @@
         </div>
     </div>
 </div>
-
-
-imgjiaoben.js:18:5
-
 </body>
 </html>

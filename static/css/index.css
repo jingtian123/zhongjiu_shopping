@@ -100,6 +100,7 @@
 
 .h_b_b_t_nav{
 	display: none;
+	z-index: 9999;
 }
 
 
@@ -706,7 +707,7 @@
 }
 /*右边*/
 .r_w_c_right{
-	width: 180;
+	width: 180px;
 	height: 560px;
 	float: right;
 }
@@ -888,7 +889,7 @@
 }
 /*右边*/
 .f_w_c_right{
-	width: 180;
+	width: 180px;
 	height: 560px;
 	float: right;
 }

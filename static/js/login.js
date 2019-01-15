@@ -31,12 +31,44 @@ $(function () {
         var reg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
         console.log($(this).val())
         if (reg.test($(this).val())) {//格式ok
-            $('.logincheack').eq(0).html('手机号码ok！').css('color','green');
-
+            $('.logincheack').eq(0).html('手机号码ok！').css('color', 'green');
         } else if ($(this).val() == '') {  //手机号为空
-            $('.logincheack').eq(0).html('手机号不能为空！').css('color','orange');
+            $('.logincheack').eq(0).html('手机号不能为空！').css('color', 'orange');
         } else {
-            $('.logincheack').eq(0).html('手机号格式不正确！').css('color','red');
+            $('.logincheack').eq(0).html('手机号格式不正确！').css('color', 'red');
         }
     })
+
+    $('#pawd').blur(function () {
+        var reg = /((?=.*\d)(?=.*\D)|(?=.*[a-zA-Z])(?=.*[^a-zA-Z]))^.{6,16}$/;
+        console.log($(this).val())
+        if (reg.test($(this).val())) {
+            $('.loginpawd').eq(0).html('密码格式ok').css('color', 'green');
+        } else if ($(this).val() == '') {
+            $('.loginpawd').eq(0).html('密码不能为空').css('color', 'orange');
+        } else {
+            $('.loginpawd').eq(0).html('密码格式不对').css('color', 'red');
+        }
+    })
+
+    /////////add login cheack
+    $('.bnt1').click(function () {
+            // console.log('ok')
+            var islogin = false
+            var reg = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
+            var reg2 = /((?=.*\d)(?=.*\D)|(?=.*[a-zA-Z])(?=.*[^a-zA-Z]))^.{6,16}$/;
+            if ((reg.test($('#coco').val())) && (reg2.test($('#pawd').val()))) {
+                islogin = true
+                if (islogin) {
+                    console.log('ok')
+                    $('#loginsubmit').submit()
+
+                }
+            }else{
+                console.log('错了')
+            }
+
+    })
+
+
 })
