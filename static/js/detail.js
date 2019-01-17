@@ -142,7 +142,8 @@ $(function(){
                 window.open('/login/',target='_self')
             }else if(response.status == 1){  // 加操作成功
 				$that.next().next().show().html(response.number)
-                $that.next().next().show()
+                $that.next().next().next().next().show()
+				// $that.nextNode('span').show()
 			}
         })
     })

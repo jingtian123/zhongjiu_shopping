@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/Cart.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/head.css' %}"/>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/Cart.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/head.js' %}"></script>
@@ -16,7 +16,7 @@
 
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
 
 
 </head>
@@ -54,61 +54,75 @@
     <div class="CartContent_bottom"></div>
     <!--有商品时购物车-->
     <div class="cart_message1">
-{#        <div class="cart_message1_top">#}
-{#            <ul>#}
-{#                <li style="width: 415px;text-align: center;">选购的商品</li>#}
-{#                <li style="width: 125px;text-align: right;padding-right: 15px;">单价（元）</li>#}
-{#                <li style="width: 190px;text-align: center;">购买数量</li>#}
-{#                <li style="width: 115px;padding-left: 15px;">金额小计</li>#}
-{#                <li style="width: 120px;text-align: center;">操作</li>#}
-{#            </ul>#}
-{#        </div>#}
-{#        <br>#}
+        {#        <div class="cart_message1_top">#}
+        {#            <ul>#}
+        {#                <li style="width: 415px;text-align: center;">选购的商品</li>#}
+        {#                <li style="width: 125px;text-align: right;padding-right: 15px;">单价（元）</li>#}
+        {#                <li style="width: 190px;text-align: center;">购买数量</li>#}
+        {#                <li style="width: 115px;padding-left: 15px;">金额小计</li>#}
+        {#                <li style="width: 120px;text-align: center;">操作</li>#}
+        {#            </ul>#}
+        {#        </div>#}
+        {#        <br>#}
 
 
-{#        <table class="table table-hover">#}
-{#            <tr>#}
-{#                <td>选购的商品</td>#}
-{#                <td>选购的商品</td>#}
-{#                <td>选购的商品</td>#}
-{#                <td>选购的商品</td>#}
-{#                <td>选购的商品</td>#}
-{#                <td>选购的商品</td>#}
-{#            </tr>#}
-{#        </table>#}
-{#                                            #}
+        {#        <table class="table table-hover">#}
+        {#            <tr>#}
+        {#                <td>选购的商品</td>#}
+        {#                <td>选购的商品</td>#}
+        {#                <td>选购的商品</td>#}
+        {#                <td>选购的商品</td>#}
+        {#                <td>选购的商品</td>#}
+        {#                <td>选购的商品</td>#}
+        {#            </tr>#}
+        {#        </table>#}
+        {#                                            #}
         <table class="table table-hover">
-                    <tr>
-                        <td>商品</td>
-                        <td>商品名称</td>
-                        <td>价格</td>
-                        <td>数量</td>
-                        <td>小计</td>
-                        <td>操作</td>
-                    </tr>
-                {% for cart in carts %}
-                    <tr>
-                        <td><img src="{{ cart.goods.img }}" alt="" class="cart"></td>
-                        <td>{{ cart.goods.title }}</td>
-                        <td>￥{{ cart.goods.price }}</td>
-                        <td>x{{ cart.number }}</td>
-                        <td>￥</td>
-                        <td>
-                            <button class="addgoods">+</button>
-                            <button class="jian">-</button>
-                        </td>
-                    </tr>
-                {% endfor %}
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-ok"></span>
-                            <b>全选</b>
-                        </td>
+            <tr>
+                <td>商品</td>
+                <td>商品名称</td>
+                <td>价格</td>
+                <td>数量</td>
+                <td>小计</td>
+                <td>操作</td>
+            </tr>
+            {% for cart in carts %}
+                <tr>
+                    <td>
+                        <img src="{{ cart.goods.img }}" alt="" class="cart">
+                        {% if cart.isselect %}
+                            <button class="carsure" cartid="{{ cart.id }}">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </button>
+                        {% else %}
+                            <button class="carsure" cartid="{{ cart.id }}">
+                                <span class="no"></span>
+                            </button>
+                        {% endif %}
+                    </td>
+                    <td><b>{{ cart.goods.title }}</b></td>
+                    <td style="color: red">￥{{ cart.goods.price }}</td>
+                    <td style="color: darkred">x{{ cart.number }}</td>
+                    <td>￥</td>
+                    <td>
+                        <button class="addgoods"><span class="glyphicon glyphicon-plus"></span></button>
+                        <br>
+                        <button class="jian"><span class="glyphicon glyphicon-minus"></span></button>
+                    </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>
 
-                    </tr>
+                    <button class="allgoods" isall="true">
+                        <span class="glyphicon glyphicon-ok"></span>全选
+                    </button>
+
+
+                </td>
+
+            </tr>
         </table>
-
-
 
 
         <div class="end">
@@ -123,7 +137,7 @@
     <div id="footer">
         <!--尾部顶部-->
         <div class="footer_top">
-{#            #}
+            {#            #}
         </div>
         <!--尾部中间部分-->
         <div class="footer_content">
@@ -208,5 +222,6 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>

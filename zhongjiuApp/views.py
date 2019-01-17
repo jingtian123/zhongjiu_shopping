@@ -251,3 +251,38 @@ def subcart(request):
     }
 
     return JsonResponse(responseData)
+
+# 改变商品状态
+def changecartstatus(request):
+    cartid = request.GET.get('cartid')
+    cart = Cart.objects.get(pk=cartid)
+    cart.isselect = not cart.isselect
+    cart.save()
+
+    data = {
+        'msg':'状态修改成功',
+        'status': 1,
+        'isselect': cart.isselect
+    }
+    return JsonResponse(data)
+
+# 全选
+def changecartall(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+
+
+    # True/flase 处理
+    isall = request.GET.get('isall')
+    if isall == 'true':
+        isall = True
+    else:
+        isall = False
+    carts = Cart.objects.filter(user=user).update(isselect=isall)
+
+    data = {
+        'msg': '状态修改成功',
+        'status': 1,
+
+    }
+    return JsonResponse(data)

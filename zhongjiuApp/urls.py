@@ -22,8 +22,13 @@ urlpatterns = [
     url(r'^cart/$', views.cart, name='cart'),
     # ajax 添加购物车
     url(r'^addcart/$', views.addcart, name='addcart'),
-    # 购物车减操作
+    # ajax 购物车减操作
     url(r'^subcart/$', views.subcart, name='subcart'),
+
+    # 修改购物车记录选中状态
+    url(r'^changecartstatus/$', views.changecartstatus, name='changecartstatus'),
+    # 全选状态
+    url(r'^changecartall/$', views.changecartall, name='changecartall'),
 
 
 
