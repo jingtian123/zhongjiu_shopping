@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4501af7-0913-4cb1-846f-3182e0ff82ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/51666ba7-0720-4573-8411-b8102663fef6.corrupted.20190114-065744.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/51666ba7-0720-4573-8411-b8102663fef6.corrupted.20190115-111639.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/51666ba7-0720-4573-8411-b8102663fef6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requiremen.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/Cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +52,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.63950974">
+    <splitter split-orientation="horizontal" split-proportion="0.5101713">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
@@ -68,11 +64,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/zhongjiuApp/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
+                <state relative-caret-position="176">
+                  <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -89,11 +85,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/cart.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="147">
-                  <caret line="93" column="48" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="50" />
+                  <caret line="93" column="43" lean-forward="true" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="50" />
                   <folding>
                     <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -106,7 +102,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/js/Cart.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="405">
@@ -139,6 +135,15 @@
                     <element signature="e#1208#1213#0" />
                     <element signature="e#1496#2545#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/css/Cart.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="501">
+                  <caret line="381" column="13" selection-start-line="381" selection-start-column="13" selection-end-line="381" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -176,8 +181,8 @@
       <find>登录</find>
       <find>names</find>
       <find>end</find>
-      <find>我的购物车</find>
       <find>carsure</find>
+      <find>我的购物车</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,11 +207,11 @@
         <option value="$PROJECT_DIR$/static/js/detail.js" />
         <option value="$PROJECT_DIR$/templates/detail.html" />
         <option value="$PROJECT_DIR$/zhongjiuApp/urls.py" />
-        <option value="$PROJECT_DIR$/static/css/Cart.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/cart.html" />
         <option value="$PROJECT_DIR$/static/js/Cart.js" />
         <option value="$PROJECT_DIR$/zhongjiuApp/views.py" />
+        <option value="$PROJECT_DIR$/static/css/Cart.css" />
       </list>
     </option>
   </component>
@@ -238,12 +243,7 @@
               <item name="zhongjiu_shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhongjiu_shopping" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhongjiu_shopping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhongjiu_shopping" type="462c0819:PsiDirectoryNode" />
-              <item name="zhongjiuApp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -319,7 +319,7 @@
       <workItem from="1547281910569" duration="17955000" />
       <workItem from="1547373890987" duration="18027000" />
       <workItem from="1547538043444" duration="57231000" />
-      <workItem from="1547696661868" duration="22368000" />
+      <workItem from="1547696661868" duration="23457000" />
     </task>
     <task id="LOCAL-00001" summary="更改远程数据库">
       <created>1547226057101</created>
@@ -356,17 +356,23 @@
       <option name="project" value="LOCAL" />
       <updated>1547695970983</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="购物车，加减，全选ok">
+      <created>1547730706071</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547730706071</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115844000" />
+    <option name="totallyTimeSpent" value="116933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1918" height="860" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.56691647" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.088865094" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="File Transfer" weight="0.32872927" />
@@ -403,7 +409,8 @@
     <MESSAGE value="注册验证ok！" />
     <MESSAGE value="商品详情ok" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="购物车，加减，全选ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="购物车，加减，全选ok" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0c5cdf70-3715-460a-9060-92e6e5f17a90/console.sql" />
@@ -555,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/Cart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="363" column="14" selection-start-line="363" selection-start-column="14" selection-end-line="363" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -578,24 +578,6 @@
             <element signature="e#878#1053#0" />
             <element signature="e#1208#1213#0" />
             <element signature="e#1496#2545#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9276">
-          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="93" column="48" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -630,11 +612,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zhongjiuApp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
+        <state relative-caret-position="176">
+          <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9276">
+          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="93" column="43" lean-forward="true" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/Cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="381" column="13" selection-start-line="381" selection-start-column="13" selection-end-line="381" selection-end-column="13" />
         </state>
       </provider>
     </entry>
