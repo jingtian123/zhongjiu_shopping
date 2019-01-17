@@ -83,7 +83,7 @@ h1{
 	width: 1000px;
 	height: auto;
 	border: 1px solid #ccc;
-	display: none;
+	display:block;
 }
 .cart_message1_top{
 	width: 1000px;
@@ -350,3 +350,26 @@ h1{
 .sc_right{
 	right: 18px;
 }
+
+
+
+/*.cartimg tr{*/
+
+	/*border-bottom:1px solid black;*/
+	/*height: 50px;*/
+	/*width: 50px;*/
+
+/*}*/
+/*.cartimg td{*/
+	/*border-top:1px solid  black;*/
+	/*!*border-bottom:1px solid black;*!*/
+
+/*}*/
+.cart{
+	height: 100px;
+	width: 100px;
+}
+/*.able table-hover {*/
+	/*text-align: center;*/
+	/*horiz-align: center;*/
+/*}*/

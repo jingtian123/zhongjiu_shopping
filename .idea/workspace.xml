@@ -1,56 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/templates/cart.html" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4501af7-0913-4cb1-846f-3182e0ff82ab" name="Default Changelist" comment="商品详情ok">
-      <change afterPath="$PROJECT_DIR$/static/img/blog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0010_auto_20190114_0633.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0011_auto_20190115_1156.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0012_cart_isselect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="e4501af7-0913-4cb1-846f-3182e0ff82ab" name="Default Changelist" comment="登录注册">
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/zhongjiu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zhongjiu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/swiper-3.4.2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/swiper-3.4.2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/wheel.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/wheel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/TIM.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/TIM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/Cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/imgjiaoben.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/imgjiaoben.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/swiper-3.4.2.jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/swiper-3.4.2.jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/wheel.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/wheel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiu/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiu/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiu/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiu/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiu/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiu/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0002_auto_20190109_0925.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0002_auto_20190109_0925.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0003_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0003_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0004_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0004_goods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0005_goods_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0005_goods_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0006_auto_20190110_1237.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0006_auto_20190110_1237.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0007_remove_user_username.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0007_remove_user_username.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0008_auto_20190112_0218.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0008_auto_20190112_0218.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/0009_auto_20190113_1015.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/0009_auto_20190113_1015.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongjiuApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zhongjiuApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongjiuApp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,44 +56,85 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11440">
-              <caret line="520" column="54" selection-start-line="520" selection-start-column="54" selection-end-line="520" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zhongjiuApp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhongjiuApp/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="190" column="12" selection-start-line="190" selection-start-column="12" selection-end-line="190" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-409">
-              <caret line="175" column="18" lean-forward="true" selection-start-line="175" selection-start-column="18" selection-end-line="175" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.79761904">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/zhongjiuApp/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="506">
+                  <caret line="25" column="18" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/zhongjiuApp/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="396">
+                  <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/css/Cart.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="428">
+                  <caret line="371" selection-start-line="371" selection-start-column="2" selection-end-line="374" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/js/Cart.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-57">
+                  <caret line="104" column="50" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="235">
+                  <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/cart.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="102" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/detail.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="528" column="24" lean-forward="true" selection-start-line="522" selection-start-column="19" selection-end-line="528" selection-end-column="24" />
+                  <folding>
+                    <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -139,7 +143,6 @@
       <find>img</find>
       <find>小图片，小区域</find>
       <find>h_b_b_t_nav</find>
-      <find>限时</find>
       <find>ipu4</find>
       <find>inp4</find>
       <find>loginsubmit</find>
@@ -152,6 +155,17 @@
       <find>中国酒业</find>
       <find>content_info_content_dl1</find>
       <find>c_i_c_b_right_a1</find>
+      <find>c_i_c_b_left</find>
+      <find>add</find>
+      <find>限时</find>
+      <find>加入购物车</find>
+      <find>c_i_c_b_right</find>
+      <find>我的购物车</find>
+      <find>cart_message</find>
+      <find>cart_message1</find>
+      <find>登录</find>
+      <find>names</find>
+      <find>end</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,10 +176,8 @@
       <list>
         <option value="$PROJECT_DIR$/zhongjiu/settings.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0c5cdf70-3715-460a-9060-92e6e5f17a90/console.sql" />
-        <option value="$PROJECT_DIR$/templates/cart.html" />
         <option value="$PROJECT_DIR$/zhongjiuApp/apps.py" />
         <option value="$PROJECT_DIR$/static/css/register.css" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/static/js/login.js" />
@@ -174,16 +186,21 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/js/register.js" />
         <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/zhongjiuApp/urls.py" />
+        <option value="$PROJECT_DIR$/static/css/detail.css" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/static/js/detail.js" />
         <option value="$PROJECT_DIR$/templates/detail.html" />
+        <option value="$PROJECT_DIR$/static/js/Cart.js" />
         <option value="$PROJECT_DIR$/zhongjiuApp/views.py" />
-        <option value="$PROJECT_DIR$/zhongjiuApp/urls.py" />
+        <option value="$PROJECT_DIR$/static/css/Cart.css" />
+        <option value="$PROJECT_DIR$/templates/cart.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="-4" />
-    <option name="width" value="982" />
+    <option name="width" value="945" />
     <option name="height" value="852" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -202,7 +219,7 @@
             <path>
               <item name="zhongjiu_shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhongjiu_shopping" type="462c0819:PsiDirectoryNode" />
-              <item name="zhongjiuApp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,6 +240,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/static/img" />
     </key>
   </component>
@@ -276,7 +295,7 @@
       <workItem from="1547212530245" duration="263000" />
       <workItem from="1547281910569" duration="17955000" />
       <workItem from="1547373890987" duration="18027000" />
-      <workItem from="1547538043444" duration="17727000" />
+      <workItem from="1547538043444" duration="56960000" />
     </task>
     <task id="LOCAL-00001" summary="更改远程数据库">
       <created>1547226057101</created>
@@ -299,17 +318,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547385258120</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ok">
+      <created>1547558798965</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547558798965</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53972000" />
+    <option name="totallyTimeSpent" value="93205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1916" height="852" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06852248" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15638529" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" />
@@ -322,19 +348,19 @@
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32664755" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7223757" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32872927" />
       <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" id="manage.py@zhongjiu" order="12" weight="0.32808024" />
+      <window_info anchor="bottom" id="manage.py@zhongjiu" order="12" weight="0.32734805" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.3292517" />
-      <window_info anchor="right" id="R Graphics" />
-      <window_info anchor="right" id="R Packages" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.30085653" />
+      <window_info anchor="right" id="R Graphics" order="0" />
+      <window_info anchor="right" id="R Packages" order="1" />
+      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="Commander" order="3" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.5299786" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +370,8 @@
     <MESSAGE value="更改远程数据库" />
     <MESSAGE value="注册验证ok！" />
     <MESSAGE value="商品详情ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品详情ok" />
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0c5cdf70-3715-460a-9060-92e6e5f17a90/console.sql" />
@@ -372,13 +399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -427,28 +447,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://51666ba7-0720-4573-8411-b8102663fef6/schema/zhongjiudb/table/zhongjiu_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#h1#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#h1#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -466,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhongjiuApp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="36" column="19" selection-start-line="35" selection-start-column="9" selection-end-line="36" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/jquery.cookie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -480,31 +475,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/detail.js">
+    <entry file="das://51666ba7-0720-4573-8411-b8102663fef6/schema/zhongjiudb/table/zhongjiu_cart.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="175" column="18" lean-forward="true" selection-start-line="175" selection-start-column="18" selection-end-line="175" selection-end-column="18" />
+        <state relative-caret-position="286">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+    <entry file="file://$PROJECT_DIR$/zhongjiuApp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11440">
-          <caret line="520" column="54" selection-start-line="520" selection-start-column="54" selection-end-line="520" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhongjiuApp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="190" column="12" selection-start-line="190" selection-start-column="12" selection-end-line="190" selection-end-column="12" />
+        <state relative-caret-position="411">
+          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zhongjiuApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        <state relative-caret-position="506">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://51666ba7-0720-4573-8411-b8102663fef6/schema/zhongjiudb/table/zhongjiu_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://51666ba7-0720-4573-8411-b8102663fef6/schema/zhongjiudb/table/zhongjiu_cart">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="147" column="6" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
+          <folding>
+            <element signature="e#63#95#0" />
+            <element signature="e#137#169#0" />
+            <element signature="e#172#180#0" />
+            <element signature="e#310#532#0" />
+            <element signature="e#575#822#0" />
+            <element signature="e#878#1053#0" />
+            <element signature="e#1208#1213#0" />
+            <element signature="e#1496#2545#0" />
+            <element signature="e#4868#4957#0" />
+            <element signature="e#4996#5084#0" />
+            <element signature="e#5121#5366#0" />
+            <element signature="e#5404#5454#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="320" column="14" selection-start-line="320" selection-start-column="1" selection-end-line="320" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/Cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="104" column="50" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://51666ba7-0720-4573-8411-b8102663fef6/schema/zhongjiudb/table/zhongjiu_goods">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhongjiuApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/Cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="371" selection-start-line="371" selection-start-column="2" selection-end-line="374" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="528" column="24" lean-forward="true" selection-start-line="522" selection-start-column="19" selection-end-line="528" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="102" selection-end-column="28" />
         </state>
       </provider>
     </entry>

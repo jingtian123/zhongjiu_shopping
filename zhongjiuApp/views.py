@@ -5,7 +5,8 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from zhongjiuApp.models import Banner, User, Goods
+from zhongjiuApp.models import Banner, User, Goods, Cart
+
 
 # 首页
 def index(request):
@@ -130,7 +131,7 @@ def logout(request):
 # 商品详情
 def detail(request,googsid):
     goods = Goods.objects.get(pk=googsid)
-    print('地址'+ goods.bigimg,goods.smallimg1,goods.smallimg2,goods.smallimg3,goods.smallimg4)
+    # print('地址'+ goods.bigimg,goods.smallimg1,goods.smallimg2,goods.smallimg3,goods.smallimg4)
 
 
 
@@ -143,29 +144,39 @@ def detail(request,googsid):
     else:
         phone = None
 
+    # 获取购物车信息
+    token = request.session.get('token')
+    carts = []
+    if token:
+       use = User.objects.get(token=token)
+       carts = Cart.objects.filter(user=use)
+
     data={
         'phone': phone,
         'goods':goods,
+        'carts':carts
     }
     return render(request, 'detail.html',context=data)
 
 # 购物车
 def cart(request):
-
-
-
     # token
     token = request.session.get('token')
     users = User.objects.filter(token=token)
+    carts = Cart.objects.filter(user=users).exclude(number=0)
+
     if users.count():
         user = users.first()
         phone = user.phone
     else:
         phone = None
 
+
     data = {
         'phone': phone,
+        'carts':carts
     }
+
 
     return render(request, 'cart.html',context=data)
 
@@ -176,7 +187,6 @@ def cheakphone(request):
 
     # 手机号码
     phone = request.GET.get('phone')
-
     users = User.objects.filter(phone=phone)
     if users.exists():
         return JsonResponse({'msg':'胸弟,手机被占用了!','status':0})
@@ -185,8 +195,59 @@ def cheakphone(request):
 
 # 加购物车
 def addcart(request):
-    return None
+    print('添加购物车请求')
+    # 获取token
+    token = request.session.get('token')
+    data = {}
+    if token:     # 有登录
+        # 获取用户
+        user = User.objects.get(token=token)
+        print(user.phone)
+        # 获取商品id
+        goodsid = request.GET.get('goodsid')
+        goods = Goods.objects.get(pk=goodsid)
+        print(goodsid)
+
+        # 判断该商品是否存在
+        carts = Cart.objects.filter(user=user).filter(goods=goods)
+        if carts.exists():  #存在
+            cart = carts.first()
+            cart.number = cart.number+1
+            cart.save()
+        else:   # 添加一条记录
+            cart = Cart()
+            cart.user = user
+            cart.goods = goods
+            cart.number = 1
+            cart.save()
+        return JsonResponse(
+                {'msg': '{}-添加购物车成功!'.format(goods.title), 'status': 1, 'number': cart.number})
+
+    else:
+        data['msg'] = '请登录后操作'
+        data['status'] = 0
+        return JsonResponse({'msg': '请登录后操作!', 'status': 0})
+
 
 # 购物车减操作
 def subcart(request):
-    return None
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    print(user.phone)
+
+    goodsid = request.GET.get('goodsid')
+    print(goodsid)
+    goods = Goods.objects.get(pk=goodsid)
+
+
+    cart = Cart.objects.filter(user=user).filter(goods=goods).first()
+    cart.number = cart.number - 1
+    cart.save()
+
+    responseData = {
+        'msg':'{}-商品删减成功'.format(goods.title),
+        'status':1,
+        'number': cart.number
+    }
+
+    return JsonResponse(responseData)
