@@ -150,7 +150,7 @@ $(function () {
         $.get('/generateorder/',function (response) {
             console.log(response)
             if(response.status == 1){
-
+                // window.open('//')
             }
 
         })
