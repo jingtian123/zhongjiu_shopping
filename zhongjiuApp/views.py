@@ -5,7 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from zhongjiuApp.models import Banner, User, Goods, Cart
+from zhongjiuApp.models import Banner, User, Goods, Cart, Order, OrderGoods
 
 
 # 首页
@@ -284,5 +284,44 @@ def changecartall(request):
         'msg': '状态修改成功',
         'status': 1,
 
+    }
+    return JsonResponse(data)
+
+
+# 生成订单号
+def generate_indentifier():
+    tempstr = str(int(time.time())) + str(random.random())
+    return tempstr
+
+# 下单
+def generateorder(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    print('令牌',token)
+    # print('用户'+user)
+
+    # 订单
+    order = Order()
+    order.user = user
+    order.indentifier = generate_indentifier()
+    order.save()
+
+    # 订单商品
+    carts = Cart.objects.filter(user=user).filter(isselect=True).exclude(number=0)
+
+    # 只有选中的商品，才是添加到订单中，从购物车中删除
+    for cart in carts:
+        orderGoods = OrderGoods()
+        orderGoods.order = order
+        orderGoods.goods = cart.goods
+        orderGoods.number = cart.number
+        orderGoods.save()
+
+        # 从购物车删除
+        cart.delete()
+    data = {
+        'msg':'下单成功',
+        'status':1,
+        'identifier': order.indentifier
     }
     return JsonResponse(data)

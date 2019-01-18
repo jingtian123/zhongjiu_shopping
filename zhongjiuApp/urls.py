@@ -30,6 +30,7 @@ urlpatterns = [
     # 全选状态
     url(r'^changecartall/$', views.changecartall, name='changecartall'),
 
-
+    # 下单
+    url(r'^generateorder/$',views.generateorder,name='generateorder'),
 
 ]

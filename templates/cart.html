@@ -87,7 +87,7 @@
                 <td>操作</td>
             </tr>
             {% for cart in carts %}
-                <tr>
+                <tr class="po">
                     <td>
                         <img src="{{ cart.goods.img }}" alt="" class="cart">
                         {% if cart.isselect %}
@@ -101,13 +101,15 @@
                         {% endif %}
                     </td>
                     <td><b>{{ cart.goods.title }}</b></td>
-                    <td style="color: red">￥{{ cart.goods.price }}</td>
-                    <td style="color: darkred">x{{ cart.number }}</td>
+                    <td style="color: red" class="price2" price="{{ cart.goods.price }}">￥{{ cart.goods.price }}</td>
+                    <td style="color: darkred" class="cartnum" num="{{ cart.number }}">{{ cart.number }}</td>
                     <td>￥</td>
                     <td>
-                        <button class="addgoods"><span class="glyphicon glyphicon-plus"></span></button>
+                        <button class="addgoods" goodsid="{{ cart.goods.id }}"><span
+                                class="glyphicon glyphicon-plus"></span></button>
                         <br>
-                        <button class="jian"><span class="glyphicon glyphicon-minus"></span></button>
+                        <button class="jian" goodsid="{{ cart.goods.id }}"><span
+                                class="glyphicon glyphicon-minus"></span></button>
                     </td>
                 </tr>
             {% endfor %}
@@ -127,8 +129,8 @@
 
         <div class="end">
             <ul>
-                <li>应付商品金额（不含运费）：<em>￥764.00</em></li>
-                <li>去结算</li>
+                <li>应付商品金额（不含运费）：<em class="zongjia"></em></li>
+                <li class="sure-order">下单</li>
             </ul>
         </div>
     </div>
