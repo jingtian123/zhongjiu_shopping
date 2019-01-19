@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>中酒网-白酒,葡萄酒(红酒),洋酒,黄酒,啤酒品牌商城官方网站</title>
+    <title>本网站为测试专用！！！！中酒网-白酒,葡萄酒(红酒),洋酒,黄酒,啤酒品牌商城官方网站</title>
     <link rel="stylesheet" href="{% static 'css/head.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/wheel.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
@@ -30,10 +30,11 @@
             <div class="h_c_n_left">
                 <ul>
                     <li><a href="#">中国酒业</a></li>
-                    <li>Hi,欢迎来到中酒</li>
+                    <li></li>
                     {% if phone %}
-                        <li><a href="#" style="color: red">{{ phone }}</a>|<a href="{% url 'zj:logout' %}"
-                                                                              style="color: black">退出</a></li>
+                        <li><a href="#" style="color: red">{{ phone }}</a>|<a href="{% url 'zj:logout' %}" style="color: black">退出</a></li>
+                        <li><a href="#">我的订单</a></li>
+
                     {% else %}
                         <li class="h_c_t_leftUl1"><a href="{% url 'zj:login' %}">请登录</a></li>
                         <li class="h_c_t_leftUl2"><a href="{% url 'zj:register' %}" style="color: darkred;">注册</a></li>

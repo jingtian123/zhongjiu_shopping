@@ -12,10 +12,7 @@
     <script type="text/javascript" src="{% static 'js/Cart.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/head.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-
-
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
 
 
@@ -54,34 +51,11 @@
     <div class="CartContent_bottom"></div>
     <!--有商品时购物车-->
     <div class="cart_message1">
-        {#        <div class="cart_message1_top">#}
-        {#            <ul>#}
-        {#                <li style="width: 415px;text-align: center;">选购的商品</li>#}
-        {#                <li style="width: 125px;text-align: right;padding-right: 15px;">单价（元）</li>#}
-        {#                <li style="width: 190px;text-align: center;">购买数量</li>#}
-        {#                <li style="width: 115px;padding-left: 15px;">金额小计</li>#}
-        {#                <li style="width: 120px;text-align: center;">操作</li>#}
-        {#            </ul>#}
-        {#        </div>#}
-        {#        <br>#}
-
-
-        {#        <table class="table table-hover">#}
-        {#            <tr>#}
-        {#                <td>选购的商品</td>#}
-        {#                <td>选购的商品</td>#}
-        {#                <td>选购的商品</td>#}
-        {#                <td>选购的商品</td>#}
-        {#                <td>选购的商品</td>#}
-        {#                <td>选购的商品</td>#}
-        {#            </tr>#}
-        {#        </table>#}
-        {#                                            #}
         <table class="table table-hover">
             <tr>
                 <td>商品</td>
                 <td>商品名称</td>
-                <td>价格</td>
+                <td>价格(￥)</td>
                 <td>数量</td>
                 <td>小计</td>
                 <td>操作</td>
@@ -101,7 +75,7 @@
                         {% endif %}
                     </td>
                     <td><b>{{ cart.goods.title }}</b></td>
-                    <td style="color: red" class="price2" price="{{ cart.goods.price }}">￥{{ cart.goods.price }}</td>
+                    <td style="color: red" class="price2" price="{{ cart.goods.price }}">{{ cart.goods.price }}</td>
                     <td style="color: darkred" class="cartnum" num="{{ cart.number }}">{{ cart.number }}</td>
                     <td>￥</td>
                     <td>

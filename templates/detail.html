@@ -518,6 +518,7 @@
                 <!--商品数量增减按钮-->
                 <div class="c_i_c_b_left">
                     {#							<input type="text" value="1" />#}
+
                 数量:<span class="add" goodsid="{{ goods.id }}">+</span>
                     <br>
                     <p   style="color: red" class="dist">
@@ -531,9 +532,9 @@
                     <span class="minus" goodsid="{{ goods.id }}">-</span>
                 </div>
                 <div class="c_i_c_b_right">
-                    <a class="c_i_c_b_right_a1" >加入购物车</a>
+                    <a class="c_i_c_b_right_a1" ></a>
                     <i></i>
-                    <a class="c_i_c_b_right_a2" href="{% url 'zj:cart' %}">立即购买</a>
+                    <a class="c_i_c_b_right_a2" href="{% url 'zj:cart' %}">去购车</a>
                     <span>（每个ID限量<em>12</em>套）</span>
                 </div>
             </div>

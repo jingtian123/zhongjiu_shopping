@@ -3,8 +3,8 @@ import random
 import time
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
-
-# Create your views here.
+from django.views.decorators.csrf import csrf_exempt
+from zhongjiuApp.alipay import alipay
 from zhongjiuApp.models import Banner, User, Goods, Cart, Order, OrderGoods
 
 
@@ -165,6 +165,8 @@ def cart(request):
     users = User.objects.filter(token=token)
     carts = Cart.objects.filter(user=users).exclude(number=0)
 
+
+
     if users.count():
         user = users.first()
         phone = user.phone
@@ -220,6 +222,11 @@ def addcart(request):
             cart.goods = goods
             cart.number = 1
             cart.save()
+
+        # pricesum = 0
+        # for temp in carts:
+        #     pricesum += int(temp.number) * float(temp.goods.price)
+        # print('总价：',pricesum)
         return JsonResponse(
                 {'msg': '{}-添加购物车成功!'.format(goods.title), 'status': 1, 'number': cart.number})
 
@@ -289,7 +296,7 @@ def changecartall(request):
 
 
 # 生成订单号
-def generate_indentifier():
+def generate_identifier():
     tempstr = str(int(time.time())) + str(random.random())
     return tempstr
 
@@ -303,7 +310,7 @@ def generateorder(request):
     # 订单
     order = Order()
     order.user = user
-    order.indentifier = generate_indentifier()
+    order.identifier = generate_identifier()
     order.save()
 
     # 订单商品
@@ -322,6 +329,78 @@ def generateorder(request):
     data = {
         'msg':'下单成功',
         'status':1,
-        'identifier': order.indentifier
+        'identifier': order.identifier
     }
     return JsonResponse(data)
+
+
+# 订单详情
+def orderdetail(request):
+
+    token = request.session.get('token')
+    users = User.objects.filter(token=token)
+    if users.count():
+        user = users.first()
+        phone = user.phone
+    else:
+        phone = None
+
+    identifier= request.GET.get('identifier')
+    print('订单号',identifier)
+    order = Order.objects.get(identifier=identifier)
+
+    return render(request,'orderdetail.html',context={'order':order,'phone':phone})
+
+@csrf_exempt
+def appnotify(request):
+    # 获取订单号
+    if request.method == 'POST':
+        from urllib.parse import parse_qs
+        body_str = request.body.decode('utf-8')
+        post_data = parse_qs(body_str)
+        post_dir = {}
+
+        print(body_str)
+        print(post_data)
+        print(post_data.items())
+        for key, value in post_data.items():
+            post_dir[key] = value[0]
+
+        out_trade_no = post_dir['out_trade_no']
+        print(out_trade_no)
+
+        # 更新状态
+        Order.objects.filter(identifier=out_trade_no).update(status=1)
+        print('支付完成')
+        return JsonResponse({'msg':'success'})
+
+
+def returnview(request):
+    return redirect('zj:index')
+
+
+# def orderlist(request, status):
+#     orders = Order.objects.filter(status=status)
+#     return render(request, 'orderlist.html', context={'orders': orders})
+
+
+def pay(request):
+    identifier = request.GET.get('identifier')
+    print('订单号',identifier)
+    order = Order.objects.get(identifier=identifier)
+    sum = 0
+    for orderGoods in order.ordergoods_set.all():
+        sum += int(orderGoods.goods.price) * int(orderGoods.number)
+
+    # 支付地址
+    url = alipay.direct_pay(
+        subject='茅台-500ml',  # 支付宝页面显示的标题
+        out_trade_no=identifier,  # 订单编号
+        total_amount=str(sum),  # 订单金额
+        return_url='http://47.107.77.202/returnview/'
+    )
+
+    # 拼接上支付网关
+    alipayurl = 'https://openapi.alipaydev.com/gateway.do?{data}'.format(data=url)
+
+    return JsonResponse({'alipayurl': alipayurl, 'status': 1})

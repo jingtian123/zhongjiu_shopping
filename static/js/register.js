@@ -35,9 +35,9 @@ $(function () {
                 console.log(response)
                 $('.lol').html(response.msg)
                 if (response.status) {
-                       $('.reminder').eq(0).html('小伙子运气可以啊，手机号可用').css('color', 'green');
+                    $('.reminder').eq(0).html('小伙子运气可以啊，手机号可用').css('color', 'green');
                 } else {
-                       $('.reminder').eq(0).html('手机号占用').css('color', 'orange');
+                    $('.reminder').eq(0).html('手机号占用').css('color', 'orange');
                 }
             })
             $('.reminder').eq(0).html('');
@@ -142,10 +142,10 @@ $(function () {
             console.log('ok')
             if ((temp != null && temp == $('.inp5').val()) && (stringNum.toLowerCase() == stringsNum.toLowerCase())) {
 
-            console.log(temp)
-            $('#submit_sent').submit()
+                console.log(temp)
+                $('#submit_sent').submit()
 
-        }
+            }
         }
 
     })

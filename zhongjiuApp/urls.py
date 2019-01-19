@@ -32,5 +32,19 @@ urlpatterns = [
 
     # 下单
     url(r'^generateorder/$',views.generateorder,name='generateorder'),
+    # 订单详情
+    url(r'^orderdetail/$', views.orderdetail, name='orderdetail'),
+    # 订单列表
+    # url(r'^orderlist/(\d+)/$', views.orderlist, name='orderlist'),
+
+    # 支付完成后(服务器)
+    url(r'^appnotify/$',views.appnotify,name='appnotify'),
+    # 买家支付完成后回到AXF哪个页面(客户端)
+    url(r'^returnview/$',views.returnview,name='returnview'),
+
+    url(r'^pay/$',views.pay,name='pay'),
+
+    url(r'^returnview/$',views.returnview,name='returnview'),
+
 
 ]

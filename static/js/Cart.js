@@ -59,6 +59,7 @@ $(function () {
                 })
                 total()
             }
+
         })
     })
 
@@ -74,6 +75,7 @@ $(function () {
         } else {    // 隐藏
             $(this).hide()
             $(this).next().next().find('.jian').hide()
+            $('.zongjia').parseInt(html())
 
         }
     })
@@ -96,6 +98,7 @@ $(function () {
                 $that.parent().prev().prev().show().html(response.number)
                 $that.next().next().show()
             }
+            total()
         })
     })
 
@@ -123,6 +126,7 @@ $(function () {
                     $that.hide()
                 }
             }
+            total()
         })
     })
 
@@ -131,12 +135,16 @@ $(function () {
         var sum = 0
 
         $('.po').each(function () {
+            var $that = $(this)
             var $findok = $(this).find('.glyphicon-ok')
             if($findok.length){
-                var num = $('.cartnum').attr('num')
-                var price = $('.price2').attr('price')
-                sum += num * price
-                console.log(sum)
+                var num =$that.find('.cartnum').html()
+                // console.log("num:",num)
+                // var price = $('.price2').html()
+                var price = $that.find('.price2').html()
+                // console.log("price:",price)
+                sum += parseInt(num) * parseInt(price)
+                // console.log("sum:",sum)
             }
         })
         // 设置显示
@@ -144,13 +152,15 @@ $(function () {
     }
 /////////////////////////////////////////
 
+    // 下单
     $('.sure-order').click(function () {
         console.log('++++点击下单++++')
 
         $.get('/generateorder/',function (response) {
             console.log(response)
             if(response.status == 1){
-                // window.open('//')
+                console.log('xiaaaaaaaaaaaaaaaaaaaaaaa')
+                window.open('/orderdetail/?identifier=' + response.identifier,target='_self')
             }
 
         })

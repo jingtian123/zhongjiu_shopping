@@ -20,9 +20,9 @@ class User(models.Model):
 
 # 商品
 class Goods(models.Model):
-    type = models.CharField(max_length=10,default=0)
+    type = models.CharField(max_length=100,default=0)
     img = models.CharField(max_length=100)
-    price = models.CharField(max_length=20)
+    price = models.CharField(max_length=50)
     title = models.CharField(max_length=100)
     bigimg = models.CharField(max_length=100,default='')
     smallimg1 = models.CharField(max_length=100,default='')
@@ -65,7 +65,7 @@ class Order(models.Model):
     # 创建时间
     createtime = models.DateTimeField(auto_now_add=True)
     # 订单号
-    indentifier = models.CharField(max_length=256)
+    identifier = models.CharField(max_length=256)
 
 
     class Meta:
