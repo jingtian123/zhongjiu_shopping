@@ -379,9 +379,11 @@ def returnview(request):
     return redirect('zj:index')
 
 
-# def orderlist(request, status):
-#     orders = Order.objects.filter(status=status)
-#     return render(request, 'orderlist.html', context={'orders': orders})
+def orderlist(request):
+    token = request.session.get('token')
+    users = User.objects.filter(token=token)
+    orders = Order.objects.filter(user=users)
+    return render(request, 'orderlist.html', context={'orders': orders})
 
 
 def pay(request):
@@ -404,3 +406,5 @@ def pay(request):
     alipayurl = 'https://openapi.alipaydev.com/gateway.do?{data}'.format(data=url)
 
     return JsonResponse({'alipayurl': alipayurl, 'status': 1})
+
+

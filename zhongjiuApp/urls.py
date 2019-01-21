@@ -35,7 +35,7 @@ urlpatterns = [
     # 订单详情
     url(r'^orderdetail/$', views.orderdetail, name='orderdetail'),
     # 订单列表
-    # url(r'^orderlist/(\d+)/$', views.orderlist, name='orderlist'),
+    url(r'^orderlist/$', views.orderlist, name='orderlist'),
 
     # 支付完成后(服务器)
     url(r'^appnotify/$',views.appnotify,name='appnotify'),

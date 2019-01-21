@@ -33,7 +33,7 @@
                     <li></li>
                     {% if phone %}
                         <li><a href="#" style="color: red">{{ phone }}</a>|<a href="{% url 'zj:logout' %}" style="color: black">退出</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="{% url 'zj:orderlist' %}">我的订单</a></li>
 
                     {% else %}
                         <li class="h_c_t_leftUl1"><a href="{% url 'zj:login' %}">请登录</a></li>

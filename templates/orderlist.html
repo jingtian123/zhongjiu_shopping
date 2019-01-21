@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>订单列表</title>
+        <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-<table>
-    <td>
-        {% for order in orders %}
 
-        {% endfor %}
+<ul>
 
-        <tr></tr>
-    </td>
-</table>
+         {% for order in orders %}
+            <li>
+               {{ forloop.counter }}
+               {{ order.identifier }}
+                   {% if order.status == 0 %}
+                     <div style="color: red">未付款</div>
+                   {% elif order.status == 1 %}
+                     <p style="color: green">付款</p>
+                {% endif %}
+            </li>
+         {% endfor %}
+
+
+</ul>
+
+
+
+
 </body>
 </html>
